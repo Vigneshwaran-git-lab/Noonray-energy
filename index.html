@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noonray Energy</title>
+  <meta property="og:title" content="Noonray Energy" />
+  <style>
+    html.lenis,
+    html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    .lenis.lenis-smooth iframe {
+      pointer-events: none;
+    }
+  </style>
+  <style>
+    #loader-container {
+      position: fixed;
+      inset: 0;
+      z-index: 1001;
+      background-color: #0c0603;
+      display: grid;
+      place-content: center;
+      transition: opacity 0.4s ease-in-out, visibilty 0.4s ease-in-out;
+    }
+
+    #loader {
+      width: 4rem;
+      height: 4rem;
+      border: 0.4rem solid #f27541;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: spinner 0.8s ease alternate infinite;
+    }
+
+    @keyframes spinner {
+      to {
+        transform: rotate(1turn) scale(1.2);
+      }
+    }
+
+    #loader-container.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #mainPage {
+      opacity: 0;
+      transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    }
+
+    #mainPage.visible {
+      opacity: 1;
+    }
+  </style>
+  <!-- <title>Noonray Energy</title> -->
+  <!-- <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.4.9/build/spline-viewer.js"
+    ></script> -->
+<script defer src="bundle.23ab05bfbf60173c46a9.js"></script></head>
+
+<body>
+  <div id="loader-container">
+    <div id="loader"></div>
+  </div>
+  <div id="mainPage">
+    <main id="top">
+      <header-component></header-component>
+      <section class="landing-page">
+        <!-- <spline-viewer
+            class="spline-disable"
+            loading-anim-type="spinner-small-dark"
+            url="https://prod.spline.design/gRU6Ec-gXKgu4noS/scene.splinecode"
+          ></spline-viewer> -->
+        <video autoplay="true" muted>
+          <source src="./interactive-spheres.mp4" type="video/mp4" />
+          <source src="./interactive-spheres.webm" type="video/webm" />
+        </video>
+
+        <div class="">
+          <div class="landing-page-card">
+            <h1 class="landing-page-card-title">
+              Inspired by Nature, <br />
+              Realized through <br />
+              Innovation
+            </h1>
+            <a href="./get-a-demo.html">
+              <button class="btn landing-page-card-button">Get a Demo</button>
+            </a>
+          </div>
+        </div>
+
+        <div id="waves-wrapper">
+          <div id="waves-bg-3" data-speed="6"></div>
+          <div id="waves-bg-2" data-speed="4"></div>
+          <div id="waves-bg-1" data-speed="2"></div>
+        </div>
+      </section>
+      <section class="why-choose-us">
+        <div class="container">
+          <div class="row entry">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 col-left entry__meta"
+              style="display: grid; place-items: start">
+              <div>
+                <h1>Why choose us?</h1>
+                <p>
+                  Founded in 2018, Noonray Energy Pvt. Ltd., is a technology-focused
+                  company offering specialized solutions in renewable energy, electric mobility, and the automotive
+                  sector.
+                  One of its core areas include technical advisory, through which,
+                  Noonray supports clients in making informed technology and investment
+                  decisions while optimizing system performance and cost efficiency.
+                </p>
+                <p>
+                  The company also provides engineering services designed to enhance the reliability,
+                  safety, and efficiency of modern energy and vehicle systems.
+                  By combining simulation-based insights with practical validation,
+                  Noonray ensures that its solutions are both technically robust and economically viable.
+                </p>
+                <p>
+                  Noonray is also deeply invested in upskilling through a range of technical training programs.
+                  Through these initiatives, Noonray helps build skilled professionals equipped to meet
+                  the evolving challenges of the energy and mobility industries.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 col-right d-flex justify-content-center align-items-center"
+              style="z-index: -1">
+              <img src="./about-us.png" alt="Why choose us image" class="why-choose-us-img" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="advisories" class="advisories">
+        <div class="container">
+          <div class="card__entry">
+            <h1 class="card__entry__meta">Advisory</h1>
+          </div>
+          <div class="row">
+            <div class="col-12 card__entry">
+              <div class="advisories-card card__entry__meta">
+                <div class="row gx-0">
+                  <div class="col-6 col text">
+                    <div>
+                      <h1>Renewable Energy</h1>
+                      <h3>Solar and Wind</h3>
+                      <p>
+                        Expert technical guidance on the design, optimization,
+                        and implementation of renewable energy systems to enhance efficiency, reliability, and
+                        sustainability.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6 col image-section" id="advisory-1"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 card__entry">
+              <div class="advisories-card card__entry__meta">
+                <div class="row gx-0">
+                  <div class="col-6 col text">
+                    <div>
+                      <h1>BESS</h1>
+                      <h3>Battery Energy Storage System</h3>
+                      <p>
+                        Providing structured guidance for developing resilient and cost-effective battery storage
+                        architectures.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6 col image-section" id="advisory-2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 card__entry">
+              <div class="advisories-card card__entry__meta">
+                <div class="row gx-0">
+                  <div class="col-6 col text">
+                    <div>
+                      <h1>Automotive</h1>
+                      <h3>E-Mobility</h3>
+                      <p>
+                        Supporting OEMs and suppliers in translating innovative concepts
+                        into production ready, reliable, and scalable solutions.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6 col image-section" id="advisory-3"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 card__entry">
+              <div class="advisories-card card__entry__meta">
+                <div class="row gx-0">
+                  <div class="col-6 col text">
+                    <div>
+                      <h1>TEV Analysis</h1>
+                      <h3>Techno-Economic Viability Analysis</h3>
+                      <p>
+                        Providing expert technical and economic analysis to evaluate the techno-economic viability of
+                        projects,
+                        ensuring optimal balance between performance, cost-effectiveness, and long-term sustainability.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6 col image-section" id="advisory-4"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 card__entry">
+              <div class="advisories-card card__entry__meta">
+                <div class="row gx-0">
+                  <div class="col-6 col text">
+                    <div>
+                      <h1>DPR</h1>
+                      <h3>Detailed Project Report</h3>
+                      <p>
+                        Guiding stakeholders with comprehensive and technically robust
+                        Detailed Project Reports that enable clear investment, design, and implementation decisions.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-6 col image-section" id="advisory-5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="services">
+        <div class="container">
+          <h1>Services</h1>
+          <p>Your partner in precision, innovation and progress.</p>
+          <div class="row card__entry">
+            <div class="col-12 card__entry__meta d-flex align-items-center service-item">
+              <div class="service-img-wrap">
+                <img src="./services-1.jpg" alt="" class="service-img">
+              </div>
+              <div class="service-text">
+                <h1>Design and Development</h1>
+                <p>Providing end-to-end design and development support, from early feasibility
+                  analysis to prototype testing and final design freeze for production.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row card__entry">
+            <div class="col-12 card__entry__meta d-flex align-items-center service-item">
+              <div class="service-img-wrap">
+                <img src="./services-2.jpg" alt="" class="service-img">
+              </div>
+              <div class="service-text">
+                <h1>Energy Management</h1>
+                <p>Designing intelligent energy control frameworks that adapt to load conditions, usage patterns, and
+                  system constraints.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row card__entry">
+            <div class="col-12 card__entry__meta d-flex align-items-center service-item">
+              <div class="service-img-wrap">
+                <img src="./services-3.jpg" alt="" class="service-img">
+              </div>
+              <div class="service-text">
+                <h1>Thermal Management</h1>
+                <p>Implementing trusted thermal management solutions with optimized heat transfer strategies, material
+                  selection, cooling architectures,
+                  and validation methodologies, that reduce losses, extend component life, thereby improving overall
+                  system reliability.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row card__entry">
+            <div class="col-12 card__entry__meta d-flex align-items-center service-item">
+              <div class="service-img-wrap">
+                <img src="./services-4.jpg" alt="" class="service-img">
+              </div>
+              <div class="service-text">
+                <h1>Simulation and Modelling</h1>
+                <p>Providing structured simulation and modeling methodologies that reduce trial-and-error, shorten
+                  testing cycles,
+                  and improve performance accuracy.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row card__entry">
+            <div class="col-12 card__entry__meta d-flex align-items-center service-item">
+              <div class="service-img-wrap">
+                <img src="./services-5.jpg" alt="" class="service-img">
+              </div>
+              <div class="service-text">
+                <h1>Testing</h1>
+                <p>Providing systematic testing strategies that uncover failure modes early, enabling iterative
+                  refinement and robust final product outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="upskilling" class="upskilling">
+        <div class="container">
+          <div class="card__entry">
+            <h1 class="card__entry__meta">Upskilling</h1>
+          </div>
+          <br />
+          <div class="container upskilling-container">
+            <div class="row">
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Automotive Thermal Management (ICEV)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Offroad Vehicle Thermal Management (ICEV)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Automotive Thermal Management (EV)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Li-ion Thermal Management</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Cabin Thermal and Energy Management (ICEV & EV)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Thermal Systems: System and Sub-system sizing</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Battery Pack Design and Development</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Traction Motors and Controller Design and Development</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Automotive Energy Management</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Advanced Energy Management Methodologies in EV</p>
+                  </div>
+                </div>
+              </div>
+              <div class="upskill-col col-md-6 col-sm-12 col-12">
+                <div class="card__entry">
+                  <div class="card__entry__meta">
+                    <p>Tyre Mechanics: Fundamentals, Design, Integration and Failures: Vehicle OEM Perspective</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="meet-our-team">
+        <div class="container">
+          <div class="card__entry">
+            <h1 class="card__entry__meta">Meet our team</h1>
+          </div>
+          <div class="row card__entry">
+            <div class="team-member col-4">
+              <div class="person-image">
+                <img src="./kaushal_img.png" alt="Scroll to top image" />
+              </div>
+              <p class="person-name">
+                Kaushal Kumar Jha
+              </p>
+              <p class="person-title">
+                CEO - Project Management, System Modeling, Design and Simulations
+              </p>
+            </div>
+            <div class="team-member col-4">
+              <div class="person-image">
+                <img src="./dhiraj_jha_img.png" alt="Scroll to top image" />
+              </div>
+              <p class="person-name">
+                Dhiraj Jha
+              </p>
+              <p class="person-title">
+                Financial Advisor - Finance and Risk Management
+              </p>
+            </div>
+            <div class="team-member col-4">
+              <div class="person-image">
+                <img src="./vinid_nair_img.png" alt="Scroll to top image" />
+              </div>
+              <p class="person-name">
+                Vinid J Nair
+              </p>
+              <p class="person-title">
+                CTO - Material and Structural Analysis
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div>
+        <img src="./scroll-to-top.png" id="scroll-to-top" alt="Scroll to top image" />
+      </div>
+      <footer-component></footer-component>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+  <script>
+    const wavesWrapper = document.querySelector("#waves-wrapper");
+    const wavesBG = wavesWrapper.querySelectorAll('div[id*="waves-bg-"]');
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: wavesWrapper,
+        start: "top top",
+        scrub: true,
+      },
+    });
+
+    wavesBG.forEach((bg) => {
+      const bgSpeed = bg.getAttribute("data-speed");
+
+      tl.to(
+        bg,
+        {
+          y: 60 * bgSpeed,
+          duration: 2,
+        },
+        0
+      );
+    });
+  </script>
+</body>
+
+</html>

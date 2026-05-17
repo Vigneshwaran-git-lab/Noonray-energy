@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technology Analyst | Noonray Energy</title>
+    <style>
+      html.lenis,
+      html.lenis body {
+        height: auto;
+      }
+
+      .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+      }
+
+      .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
+
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+
+      .lenis.lenis-smooth iframe {
+        pointer-events: none;
+      }
+    </style>
+    <style>
+      #loader-container {
+        position: fixed;
+        inset: 0;
+        z-index: 1001;
+        background-color: #0c0603;
+        display: grid;
+        place-content: center;
+        transition: opacity 0.4s ease-in-out, visibilty 0.4s ease-in-out;
+      }
+
+      #loader {
+        width: 4rem;
+        height: 4rem;
+        border: 0.4rem solid #f27541;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: spinner 0.8s ease alternate infinite;
+      }
+
+      @keyframes spinner {
+        to {
+          transform: rotate(1turn) scale(1.2);
+        }
+      }
+
+      #loader-container.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      #mainPage {
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+      }
+
+      #mainPage.visible {
+        opacity: 1;
+      }
+    </style>
+  <script defer src="bundle.23ab05bfbf60173c46a9.js"></script></head>
+  <body>
+    <div id="loader-container">
+      <div id="loader"></div>
+    </div>
+    <div id="mainPage">
+      <main>
+        <header-component></header-component>
+        <section class="job-banner">
+          <h1>Technology Analyst</h1>
+          <div class="job-banner-icons">
+            <span>
+              <small>
+                <img src="./building.png" alt="Building Icon" />
+              </small>
+              On-Site
+            </span>
+            &nbsp;
+            <span>
+              <small>
+                <img src="./location.png" alt="Location Icon" />
+                Chennai, Tamil Nadu
+              </small>
+            </span>
+          </div>
+        </section>
+        <section class="job-details">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h3>Position</h3>
+                <p>Thermal System (B.E/B.Tech or equivalent degree)-Engineer</p>
+                <br />
+                <h3>Job Description</h3>
+                <p>
+                  The Engineer’s role is to do extensive literature survey
+                  (including but not limited to patent search) and keep looking
+                  for the cutting edge technologies employed in our field. Apart
+                  from this, he/she will be responsible for the technical
+                  documentation part of the project as well. As such, the
+                  communication skills of the candidate will be of primary
+                  importance with a keen eye for attention to details.
+                </p>
+                <br />
+                <h3>Additional (Preferred) Technical Qualifications</h3>
+                <ul class="job-description">
+                  <li>
+                    Prior experience in patent searches will be an added
+                    advantage.
+                  </li>
+                  <li>
+                    Help the team procure the technical tools required for the
+                    work.
+                  </li>
+                  <li>
+                    Knowledge in multiple engineering fields will come handy for
+                    the communications with the team.
+                  </li>
+                  <li>Any other Technical certification would be helpful.</li>
+                </ul>
+                <br />
+                <h3>Required Skills</h3>
+                <ul class="desired-skills">
+                  <li>Open to learning new things.</li>
+                  <li>
+                    Excellent communication skills to deal with all levels
+                    within and out of the organization.
+                  </li>
+                  <li>
+                    Ability to work through obstacles to achieve team success.
+                  </li>
+                  <li>
+                    Tackles problems head-on and resolves them without
+                    hesitation.
+                  </li>
+                  <li>
+                    Have the ability to prioritize and manage several open cases
+                    at the same time.
+                  </li>
+                  <li>Demonstrates a positive attitude/energy.</li>
+                  <li>
+                    Able to work on different timing shifts and can handle work
+                    pressure.
+                  </li>
+                </ul>
+                <br />
+                <div class="text-center">
+                  <button
+                    type="button"
+                    class="btn apply-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                  >
+                    Apply Now
+                  </button>
+                </div>
+                <div
+                  class="modal modal-lg fade"
+                  id="staticBackdrop"
+                  data-bs-backdrop="static"
+                  data-bs-keyboard="false"
+                  tabindex="-1"
+                  aria-labelledby="staticBackdropLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                          Apply for Technology Analyst
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="#">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="mb-3">
+                                  <label
+                                    for="firstNameFormControl"
+                                    class="form-label"
+                                    >First Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="firstNameFormControl"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="mb-3">
+                                  <label
+                                    for="lastNameFormControl"
+                                    class="form-label"
+                                    >Last Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="lastNameFormControl"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="mb-3">
+                                  <label
+                                    for="emailAddressFormControl"
+                                    class="form-label"
+                                    >Email Address</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="emailAddressFormControl"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="mb-3">
+                                  <label
+                                    for="phoneFormControl"
+                                    class="form-label"
+                                    >Phone Number</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="phoneFormControl"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="mb-3">
+                                  <label for="formFile" class="form-label"
+                                    >Upload your resume</label
+                                  >
+                                  <input
+                                    class="form-control"
+                                    type="file"
+                                    id="formFile"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" class="btn submit-btn">
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br /><br />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div>
+          <img
+            src="./scroll-to-top.png"
+            id="scroll-to-top"
+            alt="Scroll to top image"
+          />
+        </div>
+        <footer-component></footer-component>
+      </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+  </body>
+</html>

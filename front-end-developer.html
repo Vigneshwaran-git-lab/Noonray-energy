@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-End Developer | Noonray Energy</title>
+    <style>
+      html.lenis,
+      html.lenis body {
+        height: auto;
+      }
+
+      .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+      }
+
+      .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
+
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+
+      .lenis.lenis-smooth iframe {
+        pointer-events: none;
+      }
+    </style>
+    <style>
+      #loader-container {
+        position: fixed;
+        inset: 0;
+        z-index: 1001;
+        background-color: #0c0603;
+        display: grid;
+        place-content: center;
+        transition: opacity 0.4s ease-in-out, visibilty 0.4s ease-in-out;
+      }
+
+      #loader {
+        width: 4rem;
+        height: 4rem;
+        border: 0.4rem solid #f27541;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-radius: 50%;
+        animation: spinner 0.8s ease alternate infinite;
+      }
+
+      @keyframes spinner {
+        to {
+          transform: rotate(1turn) scale(1.2);
+        }
+      }
+
+      #loader-container.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      #mainPage {
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+      }
+
+      #mainPage.visible {
+        opacity: 1;
+      }
+    </style>
+  <script defer src="bundle.23ab05bfbf60173c46a9.js"></script></head>
+  <body>
+    <div id="loader-container">
+      <div id="loader"></div>
+    </div>
+    <div id="mainPage">
+      <main>
+        <header-component></header-component>
+        <section class="job-banner">
+          <h1>Front-End Developer</h1>
+          <div class="job-banner-icons">
+            <span>
+              <small>
+                <img src="./building.png" alt="Building Icon" />
+              </small>
+              On-Site
+            </span>
+            &nbsp;
+            <span>
+              <small>
+                <img src="./location.png" alt="Location Icon" />
+                Chennai, Tamil Nadu
+              </small>
+            </span>
+          </div>
+        </section>
+        <section class="job-details">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h3>Position</h3>
+                <p>Front-End Developer (B.E/ B.Tech or equivalent degree)</p>
+                <br />
+                <h3>Job Description</h3>
+                <p>
+                  We are seeking a talented and experienced Front End Developer
+                  to join our team. As a Front End Developer, you will be
+                  responsible for designing and implementing user-facing web
+                  applications and interfaces. You will collaborate with
+                  cross-functional teams to deliver high-quality, responsive,
+                  and visually appealing web experiences. If you are passionate
+                  about creating intuitive and engaging user interfaces and have
+                  a strong background in web development technologies, we want
+                  to hear from you.
+                </p>
+                <br />
+                <h3>Technical Qualifications</h3>
+                <ul class="job-description">
+                  <li>
+                    Develop user-facing web applications and interfaces using
+                    HTML, CSS, and JavaScript.
+                  </li>
+                  <li>
+                    Implement responsive design principles to ensure seamless
+                    user experience across devices and screen sizes.
+                  </li>
+                  <li>
+                    Collaborate with UI/UX designers and back-end developers to
+                    translate design mockups and wireframes into functional web
+                    applications.
+                  </li>
+                  <li>
+                    Optimize applications for maximum speed and scalability.
+                  </li>
+                  <li>
+                    Write clean, maintainable, and reusable code adhering to
+                    coding standards and best practices.
+                  </li>
+                  <li>
+                    Debug and troubleshoot frontend issues and implement
+                    effective solutions.
+                  </li>
+                  <li>
+                    Stay updated with the latest frontend technologies, trends,
+                    and best practices.
+                  </li>
+                  <li>
+                    Conduct code reviews and provide constructive feedback to
+                    team members.
+                  </li>
+                  <li>
+                    Work closely with cross-functional teams to ensure alignment
+                    with project requirements and timelines.
+                  </li>
+                  <li>
+                    Participate in agile development processes and contribute to
+                    sprint planning, stand-ups, and retrospectives.
+                  </li>
+                </ul>
+                <br />
+                <h3>Required Skills</h3>
+                <ul class="desired-skills">
+                  <li>
+                    Bachelor's degree in Computer Science, Engineering, or
+                    related field.
+                  </li>
+                  <li>
+                    2 years of experience as a Front End Developer or similar
+                    role.
+                  </li>
+                  <li>
+                    Proficiency in HTML, CSS, and JavaScript, with a strong
+                    understanding of modern frontend frameworks/libraries such
+                    as React, Vue.js, or Angular.
+                  </li>
+                  <li>
+                    Experience with responsive design principles and frontend
+                    optimization techniques.
+                  </li>
+                  <li>
+                    Solid understanding of web development fundamentals
+                    including DOM manipulation, AJAX, and browser compatibility.
+                  </li>
+                  <li>
+                    Strong problem-solving skills and attention to detail.
+                  </li>
+                  <li>Excellent communication and collaboration skills.</li>
+                  <li>
+                    Ability to work independently and in a team environment.
+                  </li>
+                  <li>Familiarity with version control systems such as Git.</li>
+                  <li>
+                    Experience with agile development methodologies is a plus.
+                  </li>
+                </ul>
+                <br />
+                <div class="text-center">
+                  <button
+                    type="button"
+                    class="btn apply-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                  >
+                    Apply Now
+                  </button>
+                </div>
+                <div
+                  class="modal modal-lg fade"
+                  id="staticBackdrop"
+                  data-bs-backdrop="static"
+                  data-bs-keyboard="false"
+                  tabindex="-1"
+                  aria-labelledby="staticBackdropLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                          Apply for Front-End Developer
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="#">
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="mb-3">
+                                  <label
+                                    for="firstNameFormControl"
+                                    class="form-label"
+                                    >First Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="firstNameFormControl"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="mb-3">
+                                  <label
+                                    for="lastNameFormControl"
+                                    class="form-label"
+                                    >Last Name</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="lastNameFormControl"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="mb-3">
+                                  <label
+                                    for="emailAddressFormControl"
+                                    class="form-label"
+                                    >Email Address</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="emailAddressFormControl"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="mb-3">
+                                  <label
+                                    for="phoneFormControl"
+                                    class="form-label"
+                                    >Phone Number</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="phoneFormControl"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="mb-3">
+                                  <label for="formFile" class="form-label"
+                                    >Upload your resume</label
+                                  >
+                                  <input
+                                    class="form-control"
+                                    type="file"
+                                    id="formFile"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" class="btn submit-btn">
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br /><br />
+              </div>
+            </div>
+          </div>
+        </section>
+        <div>
+          <img
+            src="./scroll-to-top.png"
+            id="scroll-to-top"
+            alt="Scroll to top image"
+          />
+        </div>
+        <footer-component></footer-component>
+      </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+  </body>
+</html>
